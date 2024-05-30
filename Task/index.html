@@ -5,6 +5,7 @@
     <title>ToDo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
@@ -18,12 +19,12 @@
               <div class="card" style="border-radius: 15px;">
                 <div class="card-body p-5">
       
-                  <h6 class="mb-3">Awesome Todo List</h6>
+                  <h6 class="mb-3">Cписок завдань</h6>
       
                   <form class="d-flex justify-content-center align-items-center mb-4">
                     <div data-mdb-input-init class="form-outline flex-fill">
                       <input type="text" id="form3" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3">What do you need to do today?</label>
+                      <label class="form-label" for="form3">Що тобі потрібно зробити сьогодні?</label>
                     </div>
                     <button id="button-submit" type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg ms-2">Add</button>
                   </form>
@@ -37,6 +38,23 @@
             </div>
           </div>
         </div>
+
+        <div class="modal" tabindex="-1" id="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Ваше завдання</h5>
+                </div>
+                <!-- <div class="modal-body" id="modal-body">
+                </div> -->
+                <input class="modal-body" id="modal-body" type="text">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-window-hide-button">Закрыть</button>
+                  <button type="button" class="btn btn-primary" id="save-changes-button">Сохранить изменения</button>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
     
       <script src="./sours/js/main.js"></script>

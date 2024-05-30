@@ -71,9 +71,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 .custom-styling-remove-button {
   padding: 5px;
   background-color: rgb(221, 28, 28);
   color: rgb(255, 255, 255) !important;
   border-radius: 5px;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mb-3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.form-label {
+  margin-top: 10px;
+}
+
+.ms-2 {
+  margin-bottom: 32px;
+}
+
+.modal-content {
+  min-width: 500px;
+}
+
+.modal-body {
+  font-size: 20px;
 }
