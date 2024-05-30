@@ -1,29 +1,47 @@
 ## TASK_1
 
-Weather Widget
+Це простий додаток для відстеження погоди, створений за допомогою HTML, CSS (Bootstrap) та JavaScript (jQuery). Додаток дозволяє користувачам створювати список справ, де вони можуть додавати та видаляти завдання.
 
-This is a simple weather widget that displays current weather information for selected cities. It fetches data from the OpenWeatherMap API and displays it on the web page.
+## Зміст
+- [Встановлення](#встановлення)
+- [Використання](#використання)
+- [Огляд коду](#огляд-коду)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [JavaScript](#javascript)
 
-Features
+## Встановлення
 
-- Displays current weather information including temperature, wind speed, and weather condition.
-- Allows users to select different cities to view weather information.
-- Background image changes based on the selected city.
+Для запуску цього додатка виконайте наступні кроки:
 
-Usage
+1. Клонування репозиторію:
+    ```sh
+    git clone https://github.com/yourusername/weather-app.git
+    ```
+2. Перейдіть до директорії проекту:
+    ```sh
+    cd weather-app
+    ```
+3. Встановіть залежності:
+    ```sh
+    npm install
+    ```
 
-1. Clone or download the repository.
-2. Open the `index.html` file in your web browser.
-3. Click on the city name from the list to view weather information for that city.
-4. Click on the "Load Weather" button to fetch weather information for the selected city.
+## Використання
 
-Credits
+Для запуску додатка відкрийте файл `index.html` у вашому улюбленому веб-браузері.
 
-- Weather data is fetched from the OpenWeatherMap API.
-- Background images are sourced from Unsplash.
+## Огляд коду
 
-Preview
+### HTML
 
-![Weather Widget Preview](preview.png)
+HTML-структура додатка є простою і включає посилання на Bootstrap для стилізації та jQuery для функціональності.
 
-Note: Background images are for illustrative purposes only and may vary.
+## CSS
+
+Додайте ваші власні стилі CSS у файл main.css, розташований у директорії ./css/. Переконайтеся, що ви включили Bootstrap CSS, як показано в секції HTML.
+
+## JavaScript
+
+JavaScript-код використовує jQuery для обробки відправки форм, створення нових завдань і видалення завдань.
+
