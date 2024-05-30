@@ -1,5 +1,6 @@
 $(document).ready(function() {
     let taskNumberArray = [];
+    const LOCAL_STORAGE_TASKS = 'tasks';
 
     loadTasksFromLocalStorage();
     
@@ -52,9 +53,9 @@ $(document).ready(function() {
     }
     
     function saveTaskToLocalStorage(text, id){
-        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks.push({ id: id, text: text });
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        localStorage.setItem(LOCAL_STORAGE_TASKS, JSON.stringify(tasks));
     }
     
     function assignAndAddTaskID() {
@@ -105,14 +106,14 @@ $(document).ready(function() {
         const IDelement = $('#modal').attr('saveID');
         const savingNewValue = $('#modal-body').val();
 
-        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks = tasks.map(task => {
             if (task.id === Number(IDelement)){
                 task.text = savingNewValue;
             }
             return task;
         });
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        localStorage.setItem(LOCAL_STORAGE_TASKS, JSON.stringify(tasks));
 
         $('#list-group li').each(function() {
             if ($(this).attr('id') === IDelement) {
@@ -124,14 +125,14 @@ $(document).ready(function() {
     });
      
     function updateTasksLocalStorage(removeID) {
-        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         upTasks = tasks.filter(task =>task.id !== Number(removeID));
-        localStorage.setItem('tasks', JSON.stringify(upTasks));
+        localStorage.setItem(LOCAL_STORAGE_TASKS, JSON.stringify(upTasks));
         taskNumberArray = taskNumberArray.filter(number => number !== Number(removeID));
     }
     
     function loadTasksFromLocalStorage(){ 
-        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        let tasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TASKS)) || [];
         tasks.forEach(loadedTask => {
             createNewTask(loadedTask.text, loadedTask.id);
             taskNumberArray.push(loadedTask.id);
